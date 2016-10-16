@@ -1,6 +1,7 @@
 h1 {{title}}
-ul.heroes
-  li("*ngFor"="let hero of heroes", "(click)"="onSelect(hero)", "[class.selected]"="hero === selectedHero")
-    span.badge {{hero.id}}
-    |  {{hero.name}}
-hero-detail("[hero]"="selectedHero")
+nav
+    a(routerLink="/dashboard", routerLinkActive="active") Dashboard
+    a(routerLink="/heroes", routerLinkActive="active") Heroes
+    
+router-outlet
+
